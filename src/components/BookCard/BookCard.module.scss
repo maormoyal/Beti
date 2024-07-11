@@ -1,0 +1,12 @@
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+
+  p {
+    margin: 0;
+  }
+}
