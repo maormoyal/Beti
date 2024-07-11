@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useAppContext } from './App.context';
 import './App.module.scss';
 
-import BookList from '../BookList/BookList';
+import BookList from '../BookList/BooksList';
 
 const App: React.FC = () => {
   const { list, loadBooks } = useAppContext();

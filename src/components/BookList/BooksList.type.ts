@@ -1,5 +1,5 @@
 import { Book } from '../App/App.type';
 
-export interface BookListProps {
+export interface BooksListProps {
   list: Book[];
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './BookList.module.scss';
+import styles from './BooksList.module.scss';
 import BookCard from '../BookCard/BookCard';
-import { BookListProps } from './BookList.type';
+import { BooksListProps } from './BooksList.type';
 
-const BookList: React.FC<BookListProps> = ({ list }) => {
+const BooksList: React.FC<BooksListProps> = ({ list }) => {
   return (
     <div className={styles.bookList}>
       {list.map((book) => (
@@ -13,4 +13,4 @@ const BookList: React.FC<BookListProps> = ({ list }) => {
   );
 };
 
-export default BookList;
+export default BooksList;
