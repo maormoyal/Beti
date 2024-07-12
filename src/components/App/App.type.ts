@@ -1,4 +1,3 @@
-// src/components/App/App.type.ts
 export interface Book {
   id?: number;
   author: string;
@@ -8,5 +7,8 @@ export interface Book {
 
 export interface AppContextProps {
   list: Book[];
-  loadBooks: () => void;
+  loadBooks: (path: string) => void;
+  setToggleBooks: (toggle: boolean) => void;
+  toggleBooks: boolean;
+  privateBookCount: number;
 }

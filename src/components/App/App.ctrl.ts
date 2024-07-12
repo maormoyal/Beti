@@ -1,4 +1,3 @@
-// src/components/App/App.controller.ts
 import { Book } from './App.type';
 import ApiGateway from '../../shared/ApiGateway';
 
@@ -17,8 +16,8 @@ class AppController {
     return AppController.instance;
   }
 
-  async getBooks(): Promise<Book[]> {
-    const booksDto = await this.httpGateway.get('/');
+  async getBooks(path: string): Promise<Book[]> {
+    const booksDto = await this.httpGateway.get(path);
     return booksDto;
   }
 
