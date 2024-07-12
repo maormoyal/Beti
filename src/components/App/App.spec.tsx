@@ -23,11 +23,13 @@ describe('App Component', () => {
   });
 
   it('should fetch and display books', async () => {
-    render(
-      <AppProvider>
-        <App />
-      </AppProvider>
-    );
+    await act(async () => {
+      render(
+        <AppProvider>
+          <App />
+        </AppProvider>
+      );
+    });
 
     expect(await screen.findAllByRole('heading', { level: 2 })).toHaveLength(
       mockBooks.length
@@ -35,11 +37,13 @@ describe('App Component', () => {
   });
 
   it('should toggle between all books and private books', async () => {
-    render(
-      <AppProvider>
-        <App />
-      </AppProvider>
-    );
+    await act(async () => {
+      render(
+        <AppProvider>
+          <App />
+        </AppProvider>
+      );
+    });
 
     // Initial load should be all books
     expect(await screen.findAllByRole('heading', { level: 2 })).toHaveLength(
@@ -75,14 +79,20 @@ describe('App Component', () => {
   });
 
   it('should add a book when "Add Book" button is clicked', async () => {
-    render(
-      <AppProvider>
-        <App />
-      </AppProvider>
-    );
+    await act(async () => {
+      render(
+        <AppProvider>
+          <App />
+        </AppProvider>
+      );
+    });
 
     (booksRepository.addBook as jest.Mock).mockResolvedValue(true);
 
-    fireEvent.click(screen.getByText('Add Book'));
+    await act(async () => {
+      fireEvent.click(screen.getByText('Add Book'));
+    });
+
+    // Add assertions as needed to check for book addition
   });
 });
