@@ -11,21 +11,19 @@ const App: React.FC = () => {
     loadBooks('/');
   }, [loadBooks]);
 
+  const handleSwitch = () => {
+    loadBooks(toggleBooks ? '/' : '/private');
+    setToggleBooks(!toggleBooks);
+  };
+
   return (
     <>
       <Header />
-      <div>
-        <button
-          onClick={() => {
-            loadBooks(toggleBooks ? '/' : '/private');
-            setToggleBooks(!toggleBooks);
-          }}
-        >
-          {toggleBooks ? 'Show All books' : 'Show Private books'}
-        </button>
-        <BookList list={list} />
-        <button onClick={() => alert('TBD')}>Add Book</button>
-      </div>
+      <button onClick={handleSwitch}>
+        {toggleBooks ? 'Show All books' : 'Show Private books'}
+      </button>
+      <BookList list={list} />
+      <button onClick={() => alert('TBD')}>Add Book</button>
     </>
   );
 };

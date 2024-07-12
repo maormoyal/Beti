@@ -1,4 +1,3 @@
-// src/components/BookCard/BookCard.tsx
 import React from 'react';
 import styles from './BookCard.module.scss';
 import { BookCardProps } from './BookCard.type';
