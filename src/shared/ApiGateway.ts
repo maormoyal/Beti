@@ -1,4 +1,3 @@
-// src/Shared/ApiGateway.ts
 export default class ApiGateway {
   private API_BASE = 'https://tdd.demo.reaktivate.com/v1/books/maor';
 

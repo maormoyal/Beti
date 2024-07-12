@@ -1,4 +1,8 @@
 .bookList {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
 }

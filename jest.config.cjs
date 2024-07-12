@@ -11,12 +11,13 @@ module.exports = {
   testMatch: ['**/?(*.)+(spec|test).+(ts|tsx|js)'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/src/__mocks__/fileMock.js',
   },
-  collectCoverage: true, // Enable coverage collection
-  coverageDirectory: 'coverage', // Directory to output coverage reports
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    'src/**/*.{ts,tsx}', // Collect coverage from TypeScript files
-    '!src/**/*.d.ts', // Exclude type declaration files
-    '!src/**/index.ts', // Exclude index files
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/index.ts',
   ],
 };

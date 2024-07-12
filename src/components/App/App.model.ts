@@ -1,4 +1,3 @@
-// src/components/App/App.model.ts
 import AppController from './App.ctrl';
 import { Book } from './App.type';
 
@@ -17,8 +16,8 @@ class BooksRepository {
     return BooksRepository.instance;
   }
 
-  async getBooks(): Promise<Book[]> {
-    return this.controller.getBooks();
+  async getBooks(path: string): Promise<Book[]> {
+    return this.controller.getBooks(path);
   }
 
   async addBook({ name, author, ownerId }: Book): Promise<boolean> {

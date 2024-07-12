@@ -1,0 +1,14 @@
+.stickyHeader {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: #2e2e2e;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  z-index: 10000;
+  height: 80px;
+  width: 95%;
+  margin: 0 auto;
+}
