@@ -9,4 +9,5 @@ export interface Book {
 export interface AppContextProps {
   list: Book[];
   loadBooks: () => void;
+  addBook: (book: Book) => void;
 }

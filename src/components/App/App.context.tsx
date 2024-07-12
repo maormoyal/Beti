@@ -25,8 +25,13 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     setList(books);
   }, []);
 
+  const addBook = useCallback(async (book: Book) => {
+    await booksRepository.addBook(book);
+    // loadBooks();
+  }, []);
+
   return (
-    <AppContext.Provider value={{ list, loadBooks }}>
+    <AppContext.Provider value={{ list, loadBooks, addBook }}>
       {children}
     </AppContext.Provider>
   );

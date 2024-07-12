@@ -21,8 +21,8 @@ class BooksRepository {
     return this.controller.getBooks();
   }
 
-  async addBook({ name, author, ownerId }: Book): Promise<boolean> {
-    return this.controller.addBook({ name, author, ownerId });
+  async addBook({ id, name, author, ownerId }: Book): Promise<boolean> {
+    return this.controller.addBook({ id, name, author, ownerId });
   }
 }
 

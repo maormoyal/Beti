@@ -22,8 +22,10 @@ class AppController {
     return booksDto;
   }
 
-  async addBook({ name, author, ownerId }: Book): Promise<boolean> {
-    const bookAddDto = await this.httpGateway.post('/books', {
+  async addBook({ id, name, author, ownerId }: Book): Promise<boolean> {
+    debugger;
+    const bookAddDto = await this.httpGateway.post('/', {
+      id,
       name,
       author,
       ownerId,

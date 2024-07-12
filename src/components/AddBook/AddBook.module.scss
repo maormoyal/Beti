@@ -1,0 +1,57 @@
+form.addBook {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+form.addBook label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+form.addBook input {
+  padding: 6px;
+  margin-bottom: 10px;
+
+  form.addBook input {
+    padding: 6px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      color: #000000;
+    }
+  }
+  //   border: none;
+  //   cursor: pointer;
+}
+
+form.addBook button:hover {
+  background-color: #45a049;
+}
+
+form.addBook button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+form.addBook button:disabled:hover {
+  background-color: #cccccc;
+}
+
+form.addBook button:active {
+  background-color: #4caf50;
+}
+
+form.addBook button:active:hover {
+  background-color: #45a049;
+}
+
+form.addBook button:active:disabled {
+  background-color: #cccccc;
+}
